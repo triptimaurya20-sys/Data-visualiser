@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Visualizer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Data Size Visualizer</h1>
+        <p>Enter a number and select a unit to see it represented as bits.</p>
+        <p>(1 square = 1 bit)</p>
+    </header>
+
+    <main>
+        <div class="controls">
+            <input type="number" id="data-input" value="1" min="1">
+            <select id="unit-select">
+                <option value="b">Bits (b)</option>
+                <option value="B">Bytes (B)</option>
+                <option value="Kb">Kilobits (Kb)</option>
+                <option value="KB">Kilobytes (KB)</option>
+                <option value="Mb">Megabits (Mb)</option>
+                <option value="MB">Megabytes (MB)</option>
+            </select>
+            <button id="generate-btn">Generate</button>
+        </div>
+
+        <div class="options">
+            <input type="checkbox" id="disable-cap-check">
+            <label for="disable-cap-check">Disable 200k Cap (Warning: High numbers will crash your browser!)</label>
+        </div>
+
+        <div id="message-container"></div>
+        
+        <div class="show-more-container">
+            <button id="show-more-btn">Show 100k More</button>
+        </div>
+
+        <div id="visualization-container">
+            </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
